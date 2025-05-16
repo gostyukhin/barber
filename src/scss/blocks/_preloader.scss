@@ -1,0 +1,38 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+.preloader {
+  display: none;
+
+  &.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg-second;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.preload-img {
+  svg {
+    animation-name: preloaderLogo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes preloaderLogo {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}

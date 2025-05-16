@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+.about {
+  position: relative;
+  background-color: $color-bg-second;
+  padding-block: 60px;
+  color: $color-light-first;
+
+  @include md {
+    padding-block: 30px;
+  }
+}
+
+.about__content {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+
+  @include md {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.about__content-col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: flex-start;
+
+  @include md {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.about__content-img {
+  flex-shrink: 0;
+
+  img {
+    box-shadow: 16px -13px 10px 0 $color-accent-secondary;
+  }
+}

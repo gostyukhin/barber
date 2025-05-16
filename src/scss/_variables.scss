@@ -1,0 +1,72 @@
+@use "fonts";
+
+$font-family-base: "InriaSans", Arial, sans-serif;
+$font-family-secondary: "LeagueGothic", Arial, sans-serif;
+
+$color-accent-primary: #EE9038;
+$color-accent-secondary: #CA7A2E;
+$color-bg-first: #2D2E33;
+$color-bg-second: #202024;
+$color-bg-third: #2D2E33;
+$color-neutral: #484952;
+$color-light-first: #F6F6FA;
+$color-light-second: #E7E7EB;
+$color-light: #FFFFFF;
+$color-active-link: #CCCCCC;
+$color-swiper-pagination: #B28756;
+$color-services-desc: #999999;
+$color-services-card: rgba(32, 32, 36, 0.05);
+$color-tabs-nav: #2F3034;
+$gallery-overlay: rgba(32, 32, 36, 0.85);
+$color-team-bg: rgba(35, 35, 39, 0.8);
+$color-swiper-slide-wrapper: #202024;
+$color-maps-bg: rgba(36, 36, 40, 0.85);
+$color-placeholder-footer: #757575;
+
+$facebook-icon-bg: #336297;
+$twitter-icon-bg: #34C5F0;
+$linkedin-icon-bg: #127CB4;
+$googleplus-icon-bg: #E74237;
+$pinterest-icon-bg: #B71C29;
+
+$gradient-section-facts: linear-gradient(88.42deg, #202024 0%, #2E2F33 97.64%);
+
+$gradient-footer-form: linear-gradient(259.44deg, #333333 1.26%, #202024 99.92%);
+
+
+$gradient-link-hover: linear-gradient(134.42deg, #EE9038 11.1%, #885220 94.33%);
+
+$shadow-services-card: 4px 4px 4px 0px #00000040;
+$shadow-subscribe: 2.63px 2.63px 8.76px 0px #EA8E3780;
+
+
+$gradient-button-primary: linear-gradient(90.85deg, #EE9038 3.06%, #885220 99.68%);
+$gradient-button-secondary: linear-gradient(89.34deg, #202024 26%, #494953 53.32%, #676774 74.19%, #202024 99.79%);
+
+$gradient-contact-tell-about: linear-gradient(191.53deg, #292A2E 8.11%, #434347 91.17%);
+
+
+$gradient-slide: linear-gradient(175.85deg, rgba(45, 46, 51, 0.9) 1.41%, rgba(47, 48, 52, 0.9) 4.07%, rgba(51, 52, 56, 0.9) 7.54%, rgba(45, 46, 51, 0.45) 50.8%, rgba(45, 46, 51, 0.595352) 65.32%, rgba(45, 46, 51, 0.687594) 74.53%, rgba(45, 46, 51, 0.81) 86.75%, rgba(45, 46, 51, 0.9) 96.86%);
+
+$gradient-line-slide: linear-gradient(180deg,
+    rgba(238, 144, 56, 0) 0%,
+    #ee9038 50%,
+    rgba(238, 144, 56, 0) 100%);
+
+$radius-l: 30px;
+
+
+$container-width: 1140px;
+$container-padding-x: 20px;
+
+$transition-base: all 0.2s ease-in;
+
+:root {
+  --haeder-height: 0px;
+  --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-color: #B28756;
+  --swiper-pagination-bullet-horizontal-gap: 0;
+  --swiper-pagination-bottom: 100px;
+}

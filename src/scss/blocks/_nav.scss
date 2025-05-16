@@ -1,0 +1,88 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+@use 'sass:color';
+
+.nav {
+  font-family: $font-family-secondary;
+  @include fluid-text(20, 14);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-light;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__list-link {
+  padding: 40px 20px;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 10;
+    display: block;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: $gradient-link-hover;
+    transition: $transition-base;
+    inset: 0;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+  }
+
+  @include hover {
+
+    span {
+      animation-name: linkHover;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-duration: 0.4s;
+    }
+
+    &::after {
+      transform: scaleY(1);
+    }
+  }
+
+  &.active {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $color-accent-primary;
+      height: 5px;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes linkHover {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

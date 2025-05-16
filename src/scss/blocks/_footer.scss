@@ -1,0 +1,126 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+.footer {
+  padding-block: 50px;
+  background-color: $color-bg-second;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(326px, auto);
+
+  @include xl {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  p {
+    font-size: rem(16);
+    color: $color-services-desc;
+  }
+
+  .section-preview {
+    margin-bottom: 20px;
+
+    .about__subtitle {
+      color: $color-accent-primary;
+    }
+
+    .line-title {
+
+      &::before,
+      &::after {
+        flex: unset;
+        min-width: 100px;
+
+        @include md {
+          min-width: 40px;
+        }
+      }
+    }
+  }
+}
+
+.footer__wrapper-col {
+  display: flex;
+  align-items: baseline;
+  column-gap: 25px;
+  margin-right: 70px;
+
+  @include xl {
+    margin-right: 0;
+    justify-content: space-between;
+  }
+
+  @include md {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer__wrapper-about,
+.footer__wrapper-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include xl {
+    flex: 1 0 calc(50% - 25px);
+  }
+}
+
+.footer__wrapper-subscribe {
+  max-width: 326px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: $gradient-footer-form;
+  padding: 26px 26px 34px 26px;
+  box-shadow: $shadow-subscribe;
+
+  @include xl {
+    justify-self: center;
+  }
+
+  @include sm {
+    padding-inline: 10px;
+  }
+
+  form {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    input {
+      &::placeholder {
+        text-align: center;
+        color: $color-placeholder-footer;
+      }
+    }
+  }
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  a {
+    @include square(25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-neutral;
+    border-radius: 50%;
+
+    @include hover {
+      background-color: $color-accent-primary;
+    }
+  }
+}

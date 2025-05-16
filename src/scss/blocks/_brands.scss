@@ -1,0 +1,30 @@
+@use 'helpers' as *;
+@use 'variables' as *;
+
+.brands {
+  position: relative;
+  background-color: $color-accent-secondary;
+  padding-block: 52px;
+  border-top: 1px solid $color-active-link;
+  border-bottom: 1px solid $color-active-link;
+
+  @include md {
+    padding-block: 30px;
+  }
+}
+
+.brands__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

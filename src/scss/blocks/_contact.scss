@@ -150,8 +150,8 @@ label {
   display: block;
 }
 
-textarea,
-input {
+input,
+textarea {
   -webkit-appearance: none;
   appearance: none;
   background: none;
@@ -162,11 +162,23 @@ input {
   color: $color-light;
   font-size: rem(18);
   box-shadow: none;
+  border-radius: 0;
 
   &::placeholder {
     font-size: rem(16);
     text-transform: uppercase;
     color: $color-accent-primary;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 1000px $color-bg-first inset !important;
+    -webkit-text-fill-color: $color-light !important;
   }
 }
 

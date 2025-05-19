@@ -1,0 +1,98 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+@use 'sass:color';
+
+.header {
+  background-color: $color-bg-second;
+  background-color: color.adjust($color-bg-second, $alpha: -0.10);
+}
+
+.header__logo {
+  a {
+    @include square(65px);
+
+    @include hover {
+      svg {
+        animation-name: logoHover;
+        animation-timing-function: ease;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+@keyframes logoHover {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
+
+.header__button-burger {
+  display: none;
+
+  @include lg {
+    display: block;
+    width: 40px;
+    height: 25px;
+    position: relative;
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $color-accent-primary;
+      transition: top 0.2s 0.2s, transform 0.2s, opacity 0.2s;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition-base;
+      }
+
+      &:last-child {
+        top: calc(100% - 2px);
+      }
+    }
+  }
+
+  &.active {
+    span {
+      transition: top 0.2s, transform 0.2s 0.2s, opacity 0.2s 0.15s;
+
+      &:first-child {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

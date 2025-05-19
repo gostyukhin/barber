@@ -1,0 +1,890 @@
+include ../_includes.pug
+doctype html
+html(lang="en")
+  +head("Barber", "content")
+  body.scroll-lock
+
+    .preloader.open 
+      .preload-img 
+        svg(class="mustache-icon")
+          use(xlink:href="#mustache")
+
+    include ../blocks/_header.pug
+
+    include ../blocks/_mobile-menu.pug
+
+    main 
+
+      section.hero 
+        .swiper.swiper-1
+          .swiper-wrapper 
+            .swiper-slide.overlay
+              img(src="images/hero-img.webp", alt="hero-swiper-image" loading="lazy")
+              .swiper-content 
+                svg(class="mustache-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                  use(xlink:href="#mustache")
+                h1.h1.hero__title(data-swiper-parallax-x="-300%") Elevate Your Look with the 
+                  span Perfect Beard
+                a.hero__link-phone(href="tel:+00012345678" data-swiper-parallax="-100%") Call Us: +00 0 1234 5678 
+                button.hero__button.button.button--primary(type="button" data-swiper-parallax="-300%") Get in touch!
+            .swiper-slide.overlay
+              img(src="images/hero-img.webp", alt="hero-swiper-image" loading="lazy")
+              .swiper-content 
+                svg(class="mustache-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                  use(xlink:href="#mustache")
+                h1.h1.hero__title(data-swiper-parallax-x="-300%") Elevate Your Look with the 
+                  span Perfect Beard
+                a.hero__link-phone(href="tel:+00012345678" data-swiper-parallax="-100%") Call Us: +00 0 1234 5678 
+                button.hero__button.button.button--primary(type="button" data-swiper-parallax="-300%") Get in touch!
+            .swiper-slide.overlay
+              img(src="images/hero-img.webp", alt="hero-swiper-image" loading="lazy")
+              .swiper-content 
+                svg(class="mustache-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                  use(xlink:href="#mustache")
+                h1.h1.hero__title(data-swiper-parallax-x="-300%") Elevate Your Look with the 
+                  span Perfect Beard
+                a.hero__link-phone(href="tel:+00012345678" data-swiper-parallax="-100%") Call Us: +00 0 1234 5678 
+                button.hero__button.button.button--primary(type="button" data-swiper-parallax="-300%") Get in touch!
+
+          .swiper-pagination
+
+      section.about.overlay#about
+        .container
+          .section-preview(data-aos="fade-up")
+            h2.h2.about__title.line-title About us
+            p.about__subtitle.section-subtitle Who we are?
+          .about__content(data-aos="fade-up" data-aos-delay="250") 
+            .about__content-col
+              p.about__content-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros vitae erat condimentum viverra a nec lacus. Maecenas eros lectus, rhoncus vel dictum vel, dignissim eget ligula. Vestibulum id tempus quam, sed pellentesque quam. Vestibulum porta aliquet risus, ac rhoncus sem aliquet ac. Donec tincidunt cursus elit vitae euismod
+              p.about__content-desc Morbi ex felis, tincidunt sed hendrerit finibus, malesuada eu urna. Sed rutrum sodales mi a varius.
+              a.about__content-link.button.button--primary(href="#!") learn more  
+            .about__content-img   
+              img(src="images/about.webp", alt="about image" loading="lazy")
+
+      section.services.overlay#services
+        .container 
+          .section-preview(data-aos="fade-up")
+            svg(class="imperial-mustache-icon")
+              use(xlink:href="#imperial-mustache")
+            h2.h2.services__title.line-title our Services
+            p.services__subtitle.section-subtitle what we do
+          .services__content(data-aos="fade-up" data-aos-delay="250")
+            ul.services__list
+              li.services__list-item
+                svg(class="barbershop-icon")
+                  use(xlink:href="#barbershop")
+                h3.h3 High Quality barber
+                p.services__list-desc Donec tincidunt cursus
+              li.services__list-item
+                svg(class="barber-chair-icon")
+                  use(xlink:href="#barber-chair")
+                h3.h3 High Quality barber
+                p.services__list-desc Donec tincidunt cursus
+              li.services__list-item
+                svg(class="barber-brush-icon")
+                  use(xlink:href="#barber-brush")
+                h3.h3 High Quality barber
+                p.services__list-desc Donec tincidunt cursus
+              li.services__list-item
+                svg(class="straight-razor-icon")
+                  use(xlink:href="#straight-razor")
+                h3.h3 High Quality barber
+                p.services__list-desc Donec tincidunt cursus
+
+      section.gallery.overlay#gallery 
+        .container 
+          .section-preview(data-aos="fade-up")
+            h2.h2.gallery__title.line-title our gallery
+            p.gallery__subtitle.section-subtitle what we created
+          .gallery__tabs(data-aos="fade-up" data-aos-delay="250")
+            .gallery__tabs-nav 
+              button.gallery__tabs-btn.active(type="button" data-btn="one") All
+              button.gallery__tabs-btn(type="button" data-btn="two") beard
+              button.gallery__tabs-btn(type="button" data-btn="three") hair
+              button.gallery__tabs-btn(type="button" data-btn="four") mustache
+              button.gallery__tabs-btn(type="button" data-btn="five") children
+              button.gallery__tabs-btn(type="button" data-btn="six") others
+            .gallery__tabs-content 
+              ul.gallery__tab-content.active(data-content="one")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-one" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+              ul.gallery__tab-content(data-content="two")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-two" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+              ul.gallery__tab-content(data-content="three")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-three" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+              ul.gallery__tab-content(data-content="four")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-four" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+              ul.gallery__tab-content(data-content="five")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-five" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+              ul.gallery__tab-content(data-content="six")
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto1-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto1.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto2-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto2.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto3-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto3.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto4-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto4.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto5-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto5.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto6-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto6.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto7-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto7.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto8-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto8.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto9-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto9.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto10-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto10.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto11-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto11.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+                li
+                  .gallery__tab-img
+                    a(href="images/gallery-full/foto12-full.webp" data-fancybox="gallery-six" data-caption="Single image") 
+                      img(src="images/gallery/foto12.webp", alt="gallery-image" loading="lazy")
+                    .gallery__tab-overlay 
+                      p.gallery__tab-title our gallery
+                      p.gallery__tab-subtitle what we created
+
+
+          .gallery__button 
+            a.button.button--secondary(href="#!") more photos           
+
+      section.team.overlay#team
+        .container
+          .section-preview(data-aos="fade-up")
+            h2.h2.team__title.line-title our team
+            p.team__subtitle.section-subtitle our barbers
+
+          .swiper.swiper-2(data-aos="fade-up" data-aos-delay="250") 
+            .swiper-wrapper 
+              .swiper-slide
+                .swiper-slider-wrapper
+                  img(src="images/team/team1.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name john Doe
+                  p.swiper-slide-job-title Master mind
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon")
+                          use(xlink:href="#twitter")
+              .swiper-slide
+                .swiper-slider-wrapper
+                  img(src="images/team/team2.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name Mike Chiller
+                  p.swiper-slide-job-title Creative Head
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#twitter")
+              .swiper-slide
+                .swiper-slider-wrapper 
+                  img(src="images/team/team3.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name Jhons michael
+                  p.swiper-slide-job-title Technical Lead
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#twitter")
+              .swiper-slide
+                .swiper-slider-wrapper
+                  img(src="images/team/team1.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name john Doe
+                  p.swiper-slide-job-title Master mind
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#twitter")
+              .swiper-slide
+                .swiper-slider-wrapper
+                  img(src="images/team/team2.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name  Mike Chiller
+                  p.swiper-slide-job-title Creative Head
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#twitter")
+              .swiper-slide
+                .swiper-slider-wrapper
+                  img(src="images/team/team3.webp", alt="team-image" loading="lazy")
+                  p.swiper-slide-name Jhons michael
+                  p.swiper-slide-job-title Technical Lead
+                  ul.swiper-slide-socials
+                    li
+                      a(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#facebook")
+                    li
+                      a(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#googleplus")
+                    li
+                      a(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#linkedin")
+                    li
+                      a(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#pinterest")
+                    li
+                      a(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                          use(xlink:href="#twitter")
+
+            .swiper-pagination.swiper-pagination-2
+
+      aside.brands.overlay 
+        .container 
+          ul.brands__list
+            li(data-aos="fade-up" data-aos-delay="50")
+              svg(class="empresa1-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa1")
+            li(data-aos="fade-up" data-aos-delay="100")
+              svg(class="empresa2-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa2")
+            li(data-aos="fade-up" data-aos-delay="150")
+              svg(class="empresa3-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa3")
+            li(data-aos="fade-up" data-aos-delay="200")
+              svg(class="empresa4-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa4")
+            li(data-aos="fade-up" data-aos-delay="250")
+              svg(class="empresa5-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa5")
+            li(data-aos="fade-up" data-aos-delay="300")
+              svg(class="empresa6-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                use(xlink:href="#empresa6")
+
+      section.facts.overlay#facts
+        .container 
+          .section-preview(data-aos="fade-up")
+            h2.h2.facts__title.line-title some facts
+            p.facts__subtitle.section-subtitle someone numbers
+          ul.facts__list
+            li(data-aos="fade-up" data-aos-delay="50")
+              h3.facts__list-title 1000
+              p.facts__list-subtitle Design Projects Released
+              p.facts__list-desc Morbi ex felis, tincidunt sed hendrerit
+            li(data-aos="fade-up" data-aos-delay="100")
+              h3.facts__list-title 900
+              p.facts__list-subtitle Photos
+              p.facts__list-desc Donec tincidunt cursus
+            li(data-aos="fade-up" data-aos-delay="150")
+              h3.facts__list-title 500
+              p.facts__list-subtitle Marketing Ideas
+              p.facts__list-desc Morbi ex felis, tincidunt sed
+            li(data-aos="fade-up" data-aos-delay="200")
+              h3.facts__list-title 100
+              p.facts__list-subtitle Exhibitions
+              p.facts__list-desc Donec tincidunt cursus
+
+      section.contact#contact 
+        .contact__top-row.overlay
+          .container
+            .contanct__top-title(data-aos="fade-up")
+              .contanct__top-wrapper
+                svg(class="share-icon" data-swiper-parallax-y="-300%" data-swiper-parallax-opacity="0")
+                  use(xlink:href="#share")
+                p Tell About Us:
+              ul.contanct__top-socials
+                    li
+                      a.contanct__top-twitter(href="#!" aria-label="twitter") 
+                        svg(class="twitter-icon")
+                          use(xlink:href="#twitter")
+                      span 152
+                    li
+                      a.contanct__top-linkedin(href="#!" aria-label="linkedin") 
+                        svg(class="linkedin-icon")
+                          use(xlink:href="#linkedin")
+                      span 152
+                    li
+                      a.contanct__top-facebook(href="#!" aria-label="facebook") 
+                        svg(class="facebook-icon")
+                          use(xlink:href="#facebook")
+                      span 152
+                    li
+                      a.contanct__top-googleplus(href="#!" aria-label="googleplus") 
+                        svg(class="googleplus-icon")
+                          use(xlink:href="#googleplus")
+                      span 152
+                    li
+                      a.contanct__top-pinterest(href="#!" aria-label="pinterest") 
+                        svg(class="pinterest-icon")
+                          use(xlink:href="#pinterest")
+                      span 152
+        .contact__wrapper
+          .contact__map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1628.8244274562715!2d-46.62387935291608!3d-23.58327641589864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bd7eef3478d%3A0xb1bae6604548fee8!2zUHJhw6dhIErDumxpbyBDZXNhciBWYW5pbmkgLSBWaWxhIE1hcmlhbmEsIFPDo28gUGF1bG8gLSBTUCwgMDQxMTMtMTIwLCDQkdGA0LDQt9C40LvQuNGP!5e0!3m2!1sru!2sus!4v1747116215236!5m2!1sru!2sus" width="320" height="490" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+            .map-overlay
+          .contact__form 
+            .section-preview(data-aos="fade-up")
+              h2.h2.facts__title.line-title contact us
+              p.facts__subtitle.section-subtitle contact us
+            
+            form.form(action="#" method="post" data-aos="fade-up")
+              .contact__form-top 
+                label
+                  input(type="text", name="user-name" placeholder="name")
+                label
+                  input(type="email", name="user-email" placeholder="email")
+              input(type="text", name="user-subject" placeholder="subject")
+              textarea(name="user-message" placeholder="message")
+              button.button.button--primary(type="submit") send message
+                  
+    include ../blocks/_footer.pug
+    .hidden-svg
+      include ../../includes/_sprite.pug

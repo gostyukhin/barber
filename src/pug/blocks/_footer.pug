@@ -1,0 +1,40 @@
+footer.footer 
+  .container 
+    .footer__wrapper
+      .footer__wrapper-col
+        .footer__wrapper-about(data-aos="zoom-in")
+          .section-preview
+            h2.h2.about__title.line-title About us
+            p.about__subtitle.section-subtitle about us
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros vitae erat condimentum viverra a nec lacus. Maecenas eros lectus, rhoncus vel dictum vel, dignissim eget ligula. Vestibulum id tempus quam, sed pellentesque quam. Vestibulum porta aliquet risus
+        .footer__wrapper-socials(data-aos="zoom-in" data-aos-delay="100")
+          .section-preview
+            h2.h2.about__title.line-title Social media
+            p.about__subtitle.section-subtitle share in your networks
+          ul.footer__socials
+            li
+              a.footer__socials-twitter(href="#!" aria-label="twitter") 
+                svg(class="twitter-icon")
+                  use(xlink:href="#twitter")
+            li
+              a.footer__socials-linkedin(href="#!" aria-label="linkedin") 
+                svg(class="linkedin-icon")
+                  use(xlink:href="#linkedin")
+            li
+              a.footer__socials-facebook(href="#!" aria-label="facebook") 
+                svg(class="facebook-icon")
+                  use(xlink:href="#facebook")
+            li
+              a.footer__socials-googleplus(href="#!" aria-label="googleplus") 
+                svg(class="googleplus-icon")
+                  use(xlink:href="#googleplus")
+            li
+              a.footer__socials-pinterest(href="#!" aria-label="pinterest") 
+                svg(class="pinterest-icon")
+                  use(xlink:href="#pinterest")
+      
+      .footer__wrapper-subscribe(data-aos="zoom-in" data-aos-delay="200")
+        form(action="#" method="post")
+          label(for="subscribe-email")
+            input#subscribe-email(type="email", name="subscribe-email" placeholder="EMAIL TO SUBSCRIBE")  
+          button.button.button--primary(type="submit") send message

@@ -1,0 +1,23 @@
+@use 'helpers' as *;
+@use 'normalize';
+@use 'fonts';
+@use 'variables' as *;
+@use 'utils';
+@use 'globals';
+@use 'sass:color';
+
+@use "blocks/icons";
+@use "blocks/header";
+@use "blocks/nav";
+@use "blocks/hero";
+@use "blocks/swiper";
+@use "blocks/about";
+@use "blocks/services";
+@use "blocks/gallery";
+@use "blocks/team";
+@use "blocks/brands";
+@use "blocks/facts";
+@use "blocks/mobile-menu";
+@use "blocks/preloader";
+@use "blocks/contact";
+@use "blocks/footer";

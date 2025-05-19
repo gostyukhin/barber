@@ -1,0 +1,62 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+.facts {
+  position: relative;
+  padding: 50px 0 88px 0;
+  background: $gradient-section-facts;
+
+  @include md {
+    padding-block: 30px;
+  }
+}
+
+.facts__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: baseline;
+  justify-items: center;
+  gap: 20px;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+.facts__list-title {
+  font-weight: 700;
+  font-size: rem(45);
+  text-align: center;
+  color: $color-accent-primary;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $color-accent-primary;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.facts__list-subtitle {
+  font-weight: 700;
+  font-size: rem(18);
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-light;
+  margin-bottom: 10px;
+}
+
+.facts__list-desc {
+  font-weight: 400;
+  font-size: rem(13);
+  text-align: center;
+  color: $color-services-desc;
+}

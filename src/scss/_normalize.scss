@@ -1,0 +1,89 @@
+@use 'helpers' as *;
+@use 'variables' as *;
+
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+main {
+    flex-grow: 1;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+svg {
+    display: block;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+input,
+textarea {
+    font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: 0 0 0 1000px $color-bg-first inset !important;
+    -webkit-text-fill-color: $color-light !important;
+}

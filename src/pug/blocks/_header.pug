@@ -1,0 +1,40 @@
+header.header 
+  .container 
+    .header__wrapper 
+      .header__logo 
+        a(href="index.html" aria-label="Home page")
+          svg(class="logo-icon")
+            use(xlink:href="#logo")
+      .header__nav.nav 
+        ul.nav__list 
+          li.nav__list-item   
+            a.nav__list-link.active(href="index.html") 
+              span Home
+          li.nav__list-item   
+            a.nav__list-link(href="#about") 
+              span About us
+          li.nav__list-item   
+            a.nav__list-link(href="#services") 
+              span Services
+          li.nav__list-item   
+            a.nav__list-link(href="#gallery") 
+              span Our Projects
+          li.nav__list-item   
+            a.nav__list-link(href="#team") 
+              span Our Team
+          li.nav__list-item   
+            a.nav__list-link(href="#!") 
+              span Happy Clients
+          li.nav__list-item   
+            a.nav__list-link(href="#!") 
+              span Price
+          li.nav__list-item   
+            a.nav__list-link(href="#facts") 
+              span Some Facts
+          li.nav__list-item   
+            a.nav__list-link(href="#contact") 
+              span Contact Us
+      button.header__button-burger(type="button" aria-label="Open mobile menu") 
+        span
+        span
+        span

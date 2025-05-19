@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'helpers' as *;
+
+.hero {
+  height: calc(100dvh - var(--header-height));
+  position: relative;
+
+  @media (orientation: landscape) and (max-height: 600px) {
+    height: unset;
+    min-height: calc(100dvh - var(--header-height));
+  }
+}
+
+.hero__link-phone {
+  font-family: $font-family-secondary;
+  font-size: rem(26);
+  color: $color-light;
+  text-transform: uppercase;
+
+  @include hover {
+    animation-name: linkHover;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    color: $color-accent-primary;
+  }
+}

@@ -1,0 +1,83 @@
+@use 'helpers' as *;
+@use 'variables' as *;
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.mustache-icon {
+  width: 146px;
+  height: 53px;
+}
+
+.imperial-mustache-icon {
+  width: 49px;
+  height: 30px;
+  position: absolute;
+  top: -20px;
+}
+
+.services__list-item svg {
+  @include square(90px);
+}
+
+.facebook-icon {
+  width: 7px;
+  height: 14px;
+}
+
+.googleplus-icon {
+  width: 15px;
+  height: 13px;
+}
+
+.linkedin-icon {
+  width: 13px;
+  height: 12px;
+}
+
+.pinterest-icon {
+  width: 12px;
+  height: 14px;
+}
+
+.twitter-icon {
+  width: 14px;
+  height: 11px;
+}
+
+.empresa1-icon {
+  width: 86px;
+  height: 69px;
+}
+
+.empresa2-icon {
+  width: 82px;
+  height: 59px;
+}
+
+.empresa3-icon {
+  width: 110px;
+  height: 36px;
+}
+
+.empresa4-icon {
+  width: 95px;
+  height: 54px;
+}
+
+.empresa5-icon {
+  width: 98px;
+  height: 52px;
+}
+
+.empresa6-icon {
+  width: 104px;
+  height: 39px;
+}
+
+.share-icon {
+  width: 23px;
+  height: 25px;
+}
